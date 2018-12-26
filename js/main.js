@@ -24,6 +24,62 @@ $(document).ready(function(){
     });
 
 
+    if($('.product_bigimg_slider .slider_item').length >1){
+        $('.product_bigimg_slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            //fade: true,
+            asNavFor: '.product_slider_nav',
+            responsive: [
+
+                {
+                    breakpoint: 660,
+                    settings: {
+                        dots: true,
+                    }
+                }
+            ]
+        });
+    }
+
+
+    $('.product_slider_nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.product_bigimg_slider',
+        dots: false,
+        arrows: true,
+        focusOnSelect: true,
+        infinite:false,
+        responsive: [
+
+            {
+                breakpoint: 1200,
+                settings: {
+                    //vertical:true,
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow:4,
+                    //vertical:true,
+                }
+            },
+            {
+                breakpoint: 660,
+                settings: {
+                    vertical:true,
+                    //slidesToShow: 3,
+                }
+            }
+        ]
+    });
+
+
+
     /*
     $('.mm_btn').click(function () {
         $('.mm_menu').toggleClass('open');
@@ -130,59 +186,7 @@ $(document).ready(function(){
 
 
 
-    if($('.product_bigimg_slider .slider_item').length >1){
-        $('.product_bigimg_slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            //fade: true,
-            asNavFor: '.product_slider_nav',
-            responsive: [
 
-                {
-                    breakpoint: 660,
-                    settings: {
-                        dots: true,
-                    }
-                }
-            ]
-        });
-    }
-
-
-    $('.product_slider_nav').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        asNavFor: '.product_bigimg_slider',
-        dots: false,
-        arrows: true,
-        focusOnSelect: true,
-        infinite:false,
-        responsive: [
-
-            {
-                breakpoint: 1200,
-                settings: {
-                    vertical:true,
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow:4,
-                    vertical:true,
-                }
-            },
-            {
-                breakpoint: 660,
-                settings: {
-                    vertical:true,
-                    slidesToShow: 3,
-                }
-            }
-        ]
-    });
 
 
 

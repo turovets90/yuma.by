@@ -57,7 +57,7 @@ $(document).ready(function(){
             {
                 breakpoint: 1200,
                 settings: {
-                    //vertical:true,
+                    vertical:true,
                     slidesToShow: 4,
                 }
             },
@@ -65,17 +65,28 @@ $(document).ready(function(){
                 breakpoint: 767,
                 settings: {
                     slidesToShow:4,
-                    //vertical:true,
+                    vertical:true,
                 }
             },
             {
                 breakpoint: 660,
                 settings: {
                     vertical:true,
-                    //slidesToShow: 3,
+                    slidesToShow: 3,
                 }
             }
         ]
+    });
+
+
+    $('#show_more').on('click', function(){
+        if($('#more').is(':visible')){
+            $('#more').slideUp();
+            $(this).removeClass('act').text('Развернуть');
+        }else{
+            $('#more').slideDown();
+            $(this).addClass('act').text('Свернуть');
+        }
     });
 
 

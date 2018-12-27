@@ -38,25 +38,27 @@
       </div>
     </header>
     <nav class="main_nav">
-      <div class="container">
-        <div class="main_menu">
-          <div class="close"></div>
-          <ul class="nav">
-            <li class="active"><a href="Главная.html">Главная</a></li>
-            <li class="has_submenu"><a href="Каталог товаров.html">Каталог товаров<span class="arrow"></span></a>
-              <ul class="sub_menu">
-                <li><a href="Спецодежда.html">Спецодежда</a></li>
-                <li><a href="Спецобувь.html">Спецобувь</a></li>
-                <li><a href="Защита рук.html">Защита рук</a></li>
-                <li><a href="Средства индивидуальной защиты.html">Средства индивидуальной защиты</a></li>
-                <li><a href="Хозтовары.html">Хозтовары</a></li>
-                <li><a href="Бытовая химия.html">Бытовая химия</a></li>
-              </ul>
-            </li>
-            <li><a href="Прайс.html">Прайс</a></li>
-            <li><a href="Сертификаты и документы.html">Сертификаты и документы</a></li>
-            <li><a href="Контакты.html">Контакты</a></li>
-          </ul>
+      <div class="nav_fix">
+        <div class="container">
+          <div class="main_menu">
+            <div class="close"></div>
+            <ul class="nav">
+              <li class="active"><a href="Главная.html">Главная</a></li>
+              <li class="has_submenu"><a href="Каталог товаров.html">Каталог товаров<span class="arrow"></span></a>
+                <ul class="sub_menu">
+                  <li><a href="Спецодежда.html">Спецодежда</a></li>
+                  <li><a href="Спецобувь.html">Спецобувь</a></li>
+                  <li><a href="Защита рук.html">Защита рук</a></li>
+                  <li><a href="Средства индивидуальной защиты.html">Средства индивидуальной защиты</a></li>
+                  <li><a href="Хозтовары.html">Хозтовары</a></li>
+                  <li><a href="Бытовая химия.html">Бытовая химия</a></li>
+                </ul>
+              </li>
+              <li><a href="Прайс.html">Прайс</a></li>
+              <li><a href="Сертификаты и документы.html">Сертификаты и документы</a></li>
+              <li><a href="Контакты.html">Контакты</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -570,6 +572,26 @@
                     </div>
                   </article>
                 </div>
+                <div class="col-12 col-sm-6 col-md-4 col-xl-3 product_item">
+                  <article class="type_product">
+                    <div class="product_content">
+                      <div class="img_thumbnail">
+                        <div class="label_group">
+                          <div class="label new">Новинки</div>
+                        </div><a class="img_thumbnail_link" href="#"><img src="img/photo_yuma_1.png"/></a>
+                      </div>
+                      <div class="product_title_block"><a class="product_title" href="#">Рабочий летний комбинезон термостойкий</a></div>
+                      <div class="availability ok">В наличии</div>
+                      <div class="price_block">
+                        <div class="price_1">100 руб.</div>
+                        <div class="price_2">120 руб.</div>
+                      </div>
+                      <div class="hide_content">
+                        <div class="btn_group"><a class="btn_default" href="#order" data-toggle="modal">Заказать</a></div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
@@ -664,11 +686,90 @@
         </div>
       </div>
     </footer>
+    <div class="modal fade" id="order" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" data-dismiss="modal" aria-label="Close"></button>
+            <p class="title">Заказать товар</p>
+            <form class="modal_form" id="order_product">
+              <div class="row">
+                <div class="col-12 field">
+                  <label>Имя <i class="necessarily">*</i></label>
+                  <input class="form-control" type="text" name="user_name" id="user_name" placeholder="Ваше имя" data-rule-required="true" data-msg-required="Введите ваше имя" required="required"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Email</label>
+                  <input class="form-control" type="email" name="email" id="email" placeholder="Контактный email"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Телефон <i class="necessarily">*</i></label>
+                  <input class="form-control" type="tel" name="phone" id="phone" placeholder="+375 (__) ___ __ __" data-rule-required="true" data-msg-required="Введите номер телефона" required="required"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Организация <i class="necessarily">*</i></label>
+                  <input class="form-control" type="text" name="work" id="work" placeholder="Ваша организация" data-rule-required="true" data-msg-required="Введите название организации" required="required"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Город <i class="necessarily">*</i></label>
+                  <input class="form-control" type="text" name="city" id="city" placeholder="Ваш город" data-rule-required="true" data-msg-required="Введите название города" required="required"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Сообщение</label>
+                  <textarea class="form-control" placeholder="Ваше сообщение"></textarea>
+                </div>
+                <div class="col-12 btn_block">
+                  <button class="btn_default" type="submit">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="order_call" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" data-dismiss="modal" aria-label="Close"></button>
+            <p class="title">Заказать звонок</p>
+            <form class="modal_form" id="order_call_form">
+              <div class="row">
+                <div class="col-12 field">
+                  <label>Имя <i class="necessarily">*</i></label>
+                  <input class="form-control" type="text" name="user_name1" id="user_name1" placeholder="Ваше имя" data-rule-required="true" data-msg-required="Введите ваше имя" required="required"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Телефон <i class="necessarily">*</i></label>
+                  <input class="form-control" type="tel" name="phone1" id="phone1" placeholder="+375 (__) ___ __ __" data-rule-required="true" data-msg-required="Введите номер телефона" required="required"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Организация <i class="necessarily">*</i></label>
+                  <input class="form-control" type="text" name="work1" id="work1" placeholder="Ваша организация" data-rule-required="true" data-msg-required="Введите название организации" required="required"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Город <i class="necessarily">*</i></label>
+                  <input class="form-control" type="text" name="city1" id="city1" placeholder="Ваш город" data-rule-required="true" data-msg-required="Введите название города" required="required"/>
+                </div>
+                <div class="col-12 field">
+                  <label>Сообщение</label>
+                  <textarea class="form-control" placeholder="Ваше сообщение"></textarea>
+                </div>
+                <div class="col-12 btn_block">
+                  <button class="btn_default" type="submit">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="js/slick.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
   </body>

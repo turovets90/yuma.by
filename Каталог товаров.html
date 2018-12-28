@@ -11,6 +11,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
+    <div class="preloader"><img src="img/preloader.svg"/></div>
     <header>
       <div class="container header_content">
         <div class="row">
@@ -140,6 +141,15 @@
                   <div class="col-12 col-sm-6 col-md-6 col-xl-6 category_item">
                     <article class="type_category"><a class="category_link" href="#">
                         <div class="category_name">Бытовая химия</div><span class="more"></span><img class="category_img" src="img/products6.png"/></a></article>
+                  </div>
+                </div>
+                <div class="sort_block"><span>Сортировать:</span>
+                  <div class="select">
+                    <select>
+                      <option>По цене</option>
+                      <option>По цене</option>
+                      <option>По цене</option>
+                    </select>
                   </div>
                 </div>
                 <div class="row product_list">
@@ -442,7 +452,7 @@
                 </div>
                 <div class="col-12 field">
                   <label>Email</label>
-                  <input class="form-control" type="email" name="email" id="email" placeholder="Контактный email"/>
+                  <input class="form-control" type="email" name="email" id="email" placeholder="Контактный email" data-msg-email="Некорректный email"/>
                 </div>
                 <div class="col-12 field">
                   <label>Телефон <i class="necessarily">*</i></label>

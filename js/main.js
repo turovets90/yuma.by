@@ -141,7 +141,12 @@ $(document).ready(function(){
     $(window).resize();
 
 
-
+    $(window).on('load', function () {
+        var $preloader = $('.preloader'),
+            $spinner   = $preloader.find('.spinner');
+        $spinner.fadeOut(300);
+        $preloader.delay(50).fadeOut(350);
+    });
 
 
 });

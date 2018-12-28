@@ -387,9 +387,20 @@ img, video{
          width: 100%;
          .box-shadow(0 4px 16px rgba(0,0,0,0.16));
 
+         .sub_menu{
+           left: 100%;
+           top: 0;
+         }
+
          > li{
           border-bottom: 2px solid #F3F4F8;
           width: 100%;
+           position: relative;
+           &:hover{
+             .sub_menu{
+               display: block;
+             }
+           }
            &:last-child{
              border-bottom: 0;
            }
@@ -499,6 +510,14 @@ img, video{
 
         .sub_menu{
           background: #F3F4F8;
+          .sub_menu{
+            left: 100%;
+            top: 0;
+            a{
+              font-size: 14px;
+              padding: 10px 0;
+            }
+          }
           > li{
             &.active{
               >a{
@@ -2202,4 +2221,76 @@ form{
       }
     }
   }
+}
+
+
+
+.sort_block{
+  .flex();
+  .j-end();
+  .ai-center();
+  margin-bottom: 20px;
+  &.mt_minus{
+    @media (min-width:1200px){
+      margin-top: -60px;
+    }
+  }
+  span{
+    color: @color_black;
+    font-size: 16px;
+  }
+
+  .select{
+    position: relative;
+    margin-left: 27px;
+    &:hover, &:focus{
+      *{
+        color:@color_black;
+      }
+      &:before{
+        .transform(rotate(180deg));
+      }
+
+    }
+    &:before{
+      .b_a();
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9 1L5 5 1 1' stroke='%23313131'/%3e%3c/svg%3e");
+      width: 10px;
+      height: 6px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    select{
+      border:0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-progress-appearance: none;
+      padding-right: 17px;
+      &:hover, &:focus{
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    *{
+      color: @color_black;
+      font: 16px @Exo;
+    }
+  }
+}
+
+
+
+.preloader{
+  .flex();
+  .j-center();
+  .ai-center();
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 100500;
 }
